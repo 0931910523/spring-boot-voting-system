@@ -55,3 +55,14 @@ application-*.properties
 # ============================
 Thumbs.db
 .DS_Store
+
+# ============================
+# Node.js / Vue.js
+# ============================
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
