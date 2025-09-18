@@ -1,0 +1,14 @@
+USE cloud_vendor;
+
+CREATE TABLE IF NOT EXISTS vote_item (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    votes INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS vote_record (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    voter VARCHAR(100) NOT NULL,
+    item_id INT NOT NULL,
+    FOREIGN KEY (item_id) REFERENCES vote_item(id) ON DELETE CASCADE
+);
